@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { ChangeEvent, SyntheticEvent, useState } from "react";
 
 function SignupCard() {
@@ -22,7 +23,7 @@ function SignupCard() {
         setValue({ ...values, [event.target.name]: event.target.value })
     }
 
-    const onEmailValidataion = (event: ChangeEvent) => {
+    const onEmailValidataion = () => {
         const email = document.getElementById("email")
         const emailError = document.getElementById("email-error")
 
@@ -35,7 +36,7 @@ function SignupCard() {
         }
     }
 
-    const onPhoneValidation = (event: ChangeEvent) => {
+    const onPhoneValidation = () => {
         const phone = document.getElementById("phone")
         const phoneError = document.getElementById("phone-error")
         const code = document.getElementById("phone-code")
@@ -51,7 +52,7 @@ function SignupCard() {
         }
     }
 
-    const onTermsValidation = (event: ChangeEvent) => {
+    const onTermsValidation = () => {
         const terms = document.getElementById("terms")
         const termsError = document.getElementsByClassName("validity")
 
